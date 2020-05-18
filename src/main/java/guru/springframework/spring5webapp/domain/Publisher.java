@@ -12,7 +12,7 @@ public class Publisher {
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
-    private String Name;
+    private String name;
     private String address;
     private String city;
     private String state;
@@ -23,7 +23,7 @@ public class Publisher {
     private Set<Book> books = new HashSet<>();
 
     public Publisher(String name, String address, String city, String state, String zip) {
-        Name = name;
+        this.name = name;
         this.address = address;
         this.city = city;
         this.state = state;
@@ -50,11 +50,11 @@ public class Publisher {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getAddress() {
@@ -106,7 +106,7 @@ public class Publisher {
     public String toString() {
         return "Publisher{" +
             "id=" + id +
-            ", Name='" + Name + '\'' +
+            ", name='" + name + '\'' +
             ", address='" + address + '\'' +
             ", city='" + city + '\'' +
             ", state='" + state + '\'' +
